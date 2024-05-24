@@ -10,6 +10,8 @@ This Tool can download flipkart shipping labels and can crop according to the sp
 Moreover, it'll sort shipments by SKU & put the labels of combo shipments(eg. More than 1 quantity order item shipments) at the end of the output pdf file.
 So, it gets a lot easier for the seller to pack the labels from warehouse or a shop!
 
+![image](https://github.com/dharmesh-tukadiya/flipkart-label-cropping-tool/assets/140082778/6a644199-4f47-411b-a791-b721e8e470cc)
+
 
 ::: Instruction For Usage :::
 --------------------------------------------------------------------------------------------------------------------------------------
