@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Flipkart Label Cropping Tool</title>
+	<link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+	<div class="settings-and-devinfo">
+		<span><b>@Author : <a href="https://github.com/dharmesh-tukadiya/"
+					style="color: orange;padding-bottom: 3px; border-bottom: 2px solid orange;text-decoration: none;" target="_blank">Dharmesh
+					Tukadiya</a></b></span>
+	</div>
+	<div id="main" class="main">
+		<form class="download-form" id="download-form">
+			<div class="label-filter">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2">Download Filter</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Location/WareHouse
+							</td>
+							<td>
+								<select name="location" id="location">
+									<option value="">Select Location/WareHouse</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Shipment Status
+							</td>
+							<td>
+								<div class="multi-input col">
+									<div>
+										<input name="shipment-states" id="shipment-states_1" type="checkbox"
+											value="shipments_to_dispatch" checked="checked">
+										<label for="shipment-states_1">PENDING RTD</label>
+									</div>
+									<div>
+										<input name="shipment-states" id="shipment-states_2" type="checkbox"
+											class="custom-control-input w-auto" value="shipments_to_handover">
+										<label for="shipment-states_2">PENDING HANDOVER</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Delivery Partners
+							</td>
+							<td>
+								<div class="multi-input col">
+									<div>
+										<label for="delivery_vendors"></label>
+										<select name="delivery_vendors" id="delivery_vendors" multiple></select>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Download Mode
+							</td>
+							<td>
+								<div class="multi-input col">
+									<div>
+										<input name="download-mode" id="download-mode_0" type="radio"
+											value="single-multi-merged" checked="checked" required="required">
+										<label for="download-mode_0">Single - Multi Merged</label>
+									</div>
+									<div>
+										<input name="download-mode" id="download-mode_1" type="radio"
+											value="single-multi-separated" required="required">
+										<label for="download-mode_1">Single - Multi Separated</label>
+									</div>
+									<div>
+										<input name="download-mode" id="download-mode_2" type="radio"
+											value="single-only" required="required">
+										<label for="download-mode_2">Single Only</label>
+									</div>
+									<div>
+										<input name="download-mode" id="download-mode_3" type="radio"
+											required="required" value="multi-only">
+										<label for="download-mode_3">Multi Only</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="label-pdf">
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2">
+								Crop Setting
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Enable Cropping
+							</td>
+							<td>
+								<div class="multi-input row">
+									<div>
+										<input name="enable-cropping" id="enable-cropping_0" type="radio" value="yes"
+											checked="checked" required="required">
+										<label for="enable-cropping_0" class="custom-control-label">Yes</label>
+									</div>
+									<div>
+										<input name="enable-cropping" id="enable-cropping_1" type="radio" value="no"
+											required="required">
+										<label for="enable-cropping_1" class="custom-control-label">No</label>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Top Margin
+							</td>
+							<td>
+								<input id="top-margin" name="top-margin" placeholder="in px" type="number" value="20">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Bottom Margin
+							</td>
+							<td>
+								<input id="bottom-margin" name="bottom-margin" placeholder="in px" type="number"
+									value="450">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Left Margin
+							</td>
+							<td>
+								<input id="left-margin" name="left-margin" placeholder="in px" type="number"
+									value="175">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Right Margin
+							</td>
+							<td>
+								<input id="right-margin" name="right-margin" placeholder="in px" type="number"
+									value="175">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div class="label-action">
+									<button name="submit" type="submit" id="download_labels">Download</button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pdf-download-loader">
+				<div class="progress-bar-label">
+					Label Download Status
+				</div>
+				<div class="pdf-download-progress">
+					<div class="bar"><span>0%</span></div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="token-log"></div>
+	<div class="gathering-shipments-log"></div>
+	<div class="pdf-request-log"></div>
+	<div class="pdf-merging-log"></div>
+	<div class="general-log"></div>
+	</div>
+	<script src="../js/requests.js"></script>
+	<script src="../lib/pdf-lib.js"></script>
+	<script src="../js/processor.js"></script>
+	<script src="../js/loader.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+html {
+    overflow: auto;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main {
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+}
+
+.pdf-download-progress {
+    width: 300px;
+    background-color: grey;
+    height: 30px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.pdf-download-progress .bar {
+    width: 0%;
+    height: inherit;
+    background-color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.pdf-download-progress .bar span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+}
+
+.pdf-download-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 30px;
+}
+
+
+.div-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.div-row .div-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* CSS */
+button#set-api-keys {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 44px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+}
+
+button#set-api-keys:disabled {
+    cursor: default;
+}
+
+button#set-api-keys:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.multi-input.col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.multi-input.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.multi-input.row div,
+.multi-input.col div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+}
+
+.multi-input.col div {
+    width: 100%;
+}
+
+.multi-input.col div select {
+    width: 100%;
+    padding: 0px 5px 5px 5px;
+    overflow: hidden;
+    border: none;
+}
+
+.multi-input.col div.delivery-vendors {
+    align-items: self-start;
+}
+
+.multi-input.row div input[type="radio"],
+.multi-input.col div input[type="radio"] {
+    margin: unset;
+}
+
+.label-filter table input,
+.label-pdf table input {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 175px;
+}
+
+.label-filter table input[type="radio"],
+.label-pdf table input[type="radio"],
+.label-filter table input[type="checkbox"],
+.label-pdf table input[type="checkbox"] {
+    width: auto;
+}
+
+.label-filter table,
+.label-pdf table {
+    width: 425px;
+}
+
+.label-filter table tbody tr td,
+.label-pdf table tbody tr td {
+    padding: 20px;
+    /* border-bottom: 1px solid black; */
+}
+
+.label-filter table tbody td:first-child,
+.label-pdf table tbody td:first-child {
+    width: 175px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.label-filter table tbody td:nth-child(2),
+.label-pdf table tbody td:nth-child(2) {
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.label-filter table thead tr,
+.label-pdf table thead tr {
+    text-align: left;
+    font-size: 16px;
+}
+
+.download-form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    gap: 45px;
+}
+
+.label-filter,
+.label-pdf {
+    border-right: 1px solid black;
+}
+
+.label-filter table thead tr th,
+.label-pdf table thead tr th {
+    text-align: center;
+    padding: 20px;
+}
+
+.label-action {
+    text-align: center;
+}
+
+.label-action button {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid transparent;
+    background-color: darkgreen;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.label-filter,
+.label-pdf {
+    padding-right: 45px;
+}
+
+.settings-and-devinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    position: fixed;
+    bottom: 5%;
+    width: 100%;
+}
+
+#location {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: white;
+}
