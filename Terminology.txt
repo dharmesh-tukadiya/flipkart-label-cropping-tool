@@ -1,3 +1,0 @@
-Pending Labels => status = shipments_to_pack
-Pending RTD => status = shipments_to_dispatch
-Pending Hand Over => status = shipments_to_handover
