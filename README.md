@@ -15,7 +15,7 @@ So, it gets a lot easier for the seller to pack the labels from warehouse or a s
 
 ::: Instruction For Usage :::
 --------------------------------------------------------------------------------------------------------------------------------------
-1. Install [Chrome Extension](https://chromewebstore.google.com/detail/flipkart-label-downloader/aaflablfikklgpbjfhocibnonplpjbhd)
+1. Install [Chrome Extension](https://chrome.google.com/webstore/detail/aaflablfikklgpbjfhocibnonplpjbhd)
 
 2. You must Login To [Seller DashBoard](https://seller.flipkart.com/) Before using the extension.
 
