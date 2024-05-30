@@ -87,7 +87,7 @@ async function getShipmentIds(params) {
                 for (k = 0; k < loopCount; k++) {
                     requestParams = sampleParams;
                     requestParams.payload.pagination.page_num = k + 2;
-                    nextShipments = await getShipments({ requestParams: requestParams, sellerId: params.sellerId });
+                    nextShipments = await getShipments({ requestParams: requestParams, sellerId: params.sellerId, location: params.location, csrfToken: params.csrfToken });
                     if (nextShipments.items && nextShipments.items.length) {
                         shipmentCollection = [...shipmentCollection, ...nextShipments.items];
                     }
