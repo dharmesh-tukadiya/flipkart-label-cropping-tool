@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Flipkart Label Cropping Tool",
-  "version": "1.6",
+  "version": "1.7",
   "description": "Download & Crop Flipkart Labels sorted by SKU & Multi Item Shipment at the end of output PDF.",
   "action": {
     "default_popup": "popup.html",

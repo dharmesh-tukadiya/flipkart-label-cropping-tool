@@ -116,6 +116,7 @@ async function generatePDF(params) {
 
     window.setTimeout(async () => {
         downloadToBrowser(await mergedFile.save({ addDefaultPage: false }), params.name + ".pdf", 'application/pdf');
+        document.querySelector('.donate').click();
     }, 2000);
 
 }
