@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     } else {
         loadDefaults();
     }
+    document.querySelector('input#shipment-states_2').onchange = function () {
+        if (this.checked) {
+            document.querySelector('#order_tags').disabled = true;
+        } else {
+            document.querySelector('#order_tags').disabled = false;
+        }
+    }
 
 });
 async function loadDefaults() {

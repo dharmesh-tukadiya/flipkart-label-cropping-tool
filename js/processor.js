@@ -22,7 +22,7 @@ async function process() {
             return;
         }
 
-        let shipmentIds = await getShipmentIds({ sellerId: sellerId, location: location, csrfToken: CSRFToken, deliveryVendors: Array.from(document.querySelector('#delivery_vendors').selectedOptions).map(item => item.value) }).catch(error => {
+        let shipmentIds = await getShipmentIds({ sellerId: sellerId, location: location, csrfToken: CSRFToken, deliveryVendors: Array.from(document.querySelector('#delivery_vendors').selectedOptions).map(item => item.value), orderTags: (document.querySelector('#order_tags').disabled == false ? Array.from(document.querySelector('#order_tags').selectedOptions).map(item => item.value) : []) }).catch(error => {
             document.querySelector('.gathering-shipments-log').innerHTML = document.querySelector('.gathering-shipments-log').innerHTML + "<br>Error While Reading Labels!! " + error;
         }) ?? false;
         if (shipmentIds == false) {

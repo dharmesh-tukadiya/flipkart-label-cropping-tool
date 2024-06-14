@@ -382,3 +382,7 @@ html, body {
     border-radius: 5px;
 }
 /* Popup CSS End */
+
+#order_tags{
+    overflow-y: auto;
+}

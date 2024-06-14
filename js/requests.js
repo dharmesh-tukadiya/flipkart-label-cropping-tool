@@ -78,6 +78,11 @@ async function getShipmentIds(params) {
                 requestParams.payload.params.vendor_group_codes = params.deliveryVendors;
             }
         }
+        if (params.orderTags.length) {
+            params.orderTags.forEach(orderTag => {
+                requestParams.payload.params[orderTag] = true;
+            });
+        }
         shipments = await getShipments({ requestParams: requestParams, sellerId: params.sellerId, location: params.location, csrfToken: params.csrfToken });
         if (shipments.items && shipments.items.length) {
             shipmentCollection = [...shipmentCollection, ...shipments.items];
